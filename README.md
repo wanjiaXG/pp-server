@@ -14,13 +14,13 @@ GET /pp
 bid             BeatmapId
 mode            game mode： 0 = osu!, 1 = taiko, 3 = mania(Not support ctb)
 mods            Use short name. Example: HDDT or DTHR or HRHD
-acc             Percentage of acc 0-100
+acc             Percentage of acc. Range: 0-100
 miss            The number of misses
 combo           The number of combo
 good            The number of good(100)
 meh             The number of meh(50)
 score           The number of score
-percentCombo    Set a percentage to automatically calculate the number of combos, combo = percentCombo * maxcombo
+percentCombo    Set a percentage to automatically calculate the number of combos, Range: 0-100
 ```
 
 
