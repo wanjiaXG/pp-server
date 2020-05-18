@@ -27,4 +27,4 @@ percentCombo		设置一个百分比，自动计算连击数，combo = percentCom
 
 ### 示例
 
-![image-20200518142328659](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200518142328659.png)
+![image-20200518142328659](https://raw.githubusercontent.com/wanjiaXG/pp-server/master/image/image-20200518142328659.png)
