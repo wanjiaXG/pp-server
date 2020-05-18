@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using System.IO;
 
 namespace pp_server.Controllers
 {
@@ -11,6 +12,11 @@ namespace pp_server.Controllers
         public PPController(IConfiguration configuration)
         {
             _osuFilePath = configuration.GetValue<string>("OsuFilePath");
+            DirectoryInfo info = new DirectoryInfo(_osuFilePath);
+            if (!info.Exists)
+            {
+                info.Create();
+            }
         }
 
         [HttpGet("/")]
