@@ -29,4 +29,6 @@ percentCombo    设置一个百分比，自动计算连击数，combo = percentC
 
 ![image-20200518142328659](https://raw.githubusercontent.com/wanjiaXG/pp-server/master/image/osu.png)
 
+
+
 ![image-20200518142328659](https://raw.githubusercontent.com/wanjiaXG/pp-server/master/image/mania.png)
