@@ -1,34 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using PerformanceCalculator.Simulate;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace pp_server.Controllers
 {
     [ApiController]
     public class PPController : ControllerBase
     {
-        private readonly ILogger<PPController> _logger;
+        private readonly string _osuFilePath;
 
-        public PPController(ILogger<PPController> logger)
+        public PPController(IConfiguration configuration)
         {
-            _logger = logger;
+            _osuFilePath = configuration.GetValue<string>("OsuFilePath");
         }
 
         [HttpGet("/")]
-        public IEnumerable<PPModel> index(int b, int m, string mods)
+        public string Index()
         {
-            OsuSimulateCommand command = new OsuSimulateCommand();
+            return "osu beatmap pp calculator";
+        }
 
-            _logger.LogInformation("???????????????",null);
-
-            List<PPModel> p = new List<PPModel>();
-            p.Add(new PPModel() { BeatmapId = b });
-            return p;
-
+        [HttpGet("/pp")]
+        public string GetPP(int bid, int mode, string mods, double acc, int miss, int combo, int good, int meh, int score, double percentCombo) 
+        {
+            return PPHelper.GetPP(_osuFilePath, bid, mode, mods, acc, miss, combo, good, meh, score, percentCombo);
         }
     }
 }

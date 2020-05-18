@@ -32,7 +32,7 @@ namespace PPCalculator
             SimulateCommand command = new OsuSimulateCommand();
             command.Beatmap = "c:\\osu\\osu.osu";
             command.Accuracy = 75.3;
-            command.Combo = 200;
+            command.Combo = 2000;
             command.Misses = 20;
             command.Execute();
             Console.WriteLine(command.ToJson());

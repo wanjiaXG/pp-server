@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\osu-tools\PerformanceCalculator\PerformanceCalculator.csproj" />
+    <ProjectReference Include="..\PPCalculator\PPCalculator.csproj" />
   </ItemGroup>
 
 
